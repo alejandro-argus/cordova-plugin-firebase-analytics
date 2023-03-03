@@ -23,6 +23,8 @@ xmlns:android="http://schemas.android.com/apk/res/android"
     <preference name="FIREBASE_ANALYTICS_COLLECTION_ENABLED" default="true" />
 
     <platform name="ios">
+        <preference name="IOS_FIREBASE_POD_VERSION" default="~> 6.21.0" />
+
         <config-file target="config.xml" parent="/*">
             <feature name="FirebaseAnalytics">
                 <param name="ios-package" value="FirebaseAnalyticsPlugin" />
@@ -46,7 +48,7 @@ xmlns:android="http://schemas.android.com/apk/res/android"
                 <source url="https://cdn.cocoapods.org/"/>
             </config>
             <pods>
-                <pod name="Firebase/Analytics" spec="~> 6.21.0" />
+                <pod name="Firebase/Analytics" spec="$IOS_FIREBASE_POD_VERSION" />
             </pods>
         </podspec>
     </platform>
